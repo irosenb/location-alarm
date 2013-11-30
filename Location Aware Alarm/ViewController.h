@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    __weak IBOutlet UIDatePicker *setAlarmDate;
+}
+
+-(IBAction) AlarmSetButtonTapped:(id)sender;
+-(IBAction) AlarmCancelButtonTapped:(id)sender;
 
 @end

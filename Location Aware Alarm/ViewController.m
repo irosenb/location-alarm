@@ -20,6 +20,22 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(IBAction) AlarmSetButtonTapped:(id)sender {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    
+    NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
+    NSLog(@"Alarm Set button tapped. Date: %@", dateTimeString);
+
+}
+
+-(IBAction) AlarmCancelButtonTapped:(id)sender {
+    NSLog(@"Alarm Button Canceled");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
