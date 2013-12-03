@@ -22,10 +22,15 @@
 
 -(IBAction) AlarmSetButtonTapped:(id)sender {
     
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = (id)self;
+    NSLog(@"Location is %@", locationManager);
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    
     
     NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
     NSLog(@"Alarm Set button tapped. Date: %@", dateTimeString);

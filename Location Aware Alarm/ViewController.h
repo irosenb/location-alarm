@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController
 {
     __weak IBOutlet UIDatePicker *setAlarmDate;
+//    CLG
 }
 
 -(IBAction) AlarmSetButtonTapped:(id)sender;
