@@ -25,6 +25,8 @@
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
 	locationManager.delegate = (id)self;
     NSLog(@"Location is %@", locationManager);
+    [CoreDataManager sharedManager].modelName = @"Alarm";
+    Alarm *john = [Person create];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
