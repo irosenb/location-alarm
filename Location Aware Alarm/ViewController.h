@@ -13,8 +13,13 @@
 @interface ViewController : UIViewController
 {
     __weak IBOutlet UIDatePicker *setAlarmDate;
+    
+    
+//    @property(nonatomic, retain) Person *john;
 //    CLG
 }
+
+@property(nonatomic, retain) CLLocationManager *locationManager;
 
 -(IBAction) AlarmSetButtonTapped:(id)sender;
 -(IBAction) AlarmCancelButtonTapped:(id)sender;

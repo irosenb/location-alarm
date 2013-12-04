@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+@synthesize locationManager;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -22,17 +24,25 @@
 
 -(IBAction) AlarmSetButtonTapped:(id)sender {
     
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
 	locationManager.delegate = (id)self;
-    NSLog(@"Location is %@", locationManager);
-    [CoreDataManager sharedManager].modelName = @"Alarm";
-    Alarm *john = [Person create];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    CLLocation *location = [locationManager location];
+    
+    NSLog(@"Location is %@", location);
+    [locationManager stopUpdatingLocation];
+//    [CoreDataManager sharedManager].modelName = @"Alarm";
+//    Person *john = [Person create];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
-    
+
+//    john.time = [dateFormatter stringFromDate: setAlarmDate.date];
+//    john.
     
     NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
     NSLog(@"Alarm Set button tapped. Date: %@", dateTimeString);
