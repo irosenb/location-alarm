@@ -4,11 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
+        <!--Clock Table View Controller - Root View Controller-->
         <scene sceneID="AFj-tP-AUB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kqZ-6C-v81" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="XEc-R5-Lgl" sceneMemberID="viewController">
+                <tableViewController id="XEc-R5-Lgl" customClass="ClockTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hz5-qY-obZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +34,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqZ-6C-v81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740" y="-32"/>
         </scene>
@@ -79,8 +79,8 @@
         <!--Navigation Controller-->
         <scene sceneID="loq-WC-DDa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zoA-hq-yba" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Gml-Ws-eaW" sceneMemberID="viewController">
+                    <keyCommands/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RLZ-Ab-ED5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -88,6 +88,7 @@
                         <segue destination="XEc-R5-Lgl" kind="relationship" relationship="rootViewController" id="yt1-bU-2R2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoA-hq-yba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="206" y="-32"/>
         </scene>

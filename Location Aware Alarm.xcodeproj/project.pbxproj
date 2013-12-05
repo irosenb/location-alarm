@@ -25,6 +25,7 @@
 		6AC0953A184A4F1900D4E284 /* Location_Aware_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC09539184A4F1900D4E284 /* Location_Aware_AlarmTests.m */; };
 		6AC09544184A911500D4E284 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC09543184A911500D4E284 /* CoreLocation.framework */; };
 		6AD93A91184E333900062EF0 /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */; };
+		6AF654981850DE9900074FCA /* ClockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF654971850DE9900074FCA /* ClockTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		6AC09543184A911500D4E284 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6AD93A90184E333900062EF0 /* Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alarm.xcdatamodel; sourceTree = "<group>"; };
 		6AF07D8D184D3D8800A3A87F /* Location Aware Alarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Location Aware Alarm.entitlements"; sourceTree = "<group>"; };
+		6AF654961850DE9900074FCA /* ClockTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewController.h; sourceTree = "<group>"; };
+		6AF654971850DE9900074FCA /* ClockTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewController.m; sourceTree = "<group>"; };
 		7DB48E1073FC4B9B82033D4E /* libPods-Location Aware Alarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Location Aware Alarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +140,8 @@
 				6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */,
 				6AC09526184A4F1900D4E284 /* Images.xcassets */,
 				6AC09512184A4F1900D4E284 /* Supporting Files */,
+				6AF654961850DE9900074FCA /* ClockTableViewController.h */,
+				6AF654971850DE9900074FCA /* ClockTableViewController.m */,
 			);
 			path = "Location Aware Alarm";
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC09525184A4F1900D4E284 /* ViewController.m in Sources */,
+				6AF654981850DE9900074FCA /* ClockTableViewController.m in Sources */,
 				6AC0951C184A4F1900D4E284 /* AppDelegate.m in Sources */,
 				6AC09518184A4F1900D4E284 /* main.m in Sources */,
 				6AD93A91184E333900062EF0 /* Alarm.xcdatamodeld in Sources */,
