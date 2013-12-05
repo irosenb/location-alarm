@@ -14,7 +14,6 @@
 {
     __weak IBOutlet UIDatePicker *setAlarmDate;
     
-    
 //    @property(nonatomic, retain) Person *john;
 //    CLG
 }

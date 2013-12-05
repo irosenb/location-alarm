@@ -3,6 +3,7 @@ platform :ios
 
 target "Location Aware Alarm" do
 	pod "ObjectiveRecord"
+  pod "SSDataKit"
 end
 
 target "Location Aware AlarmTests" do

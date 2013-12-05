@@ -2,12 +2,15 @@ PODS:
   - ObjectiveRecord (1.4.0):
     - ObjectiveSugar
   - ObjectiveSugar (0.9)
+  - SSDataKit (0.2.0)
 
 DEPENDENCIES:
   - ObjectiveRecord
+  - SSDataKit
 
 SPEC CHECKSUMS:
   ObjectiveRecord: 109a6c583284c2c9af1dc0d6ccc1dfc84e826c45
   ObjectiveSugar: 81337e36790b5a157ee6ccdcf65c91393ca5d900
+  SSDataKit: e6b57f2ab358b97ac491bb7dc70af7de9d8544bc
 
 COCOAPODS: 0.25.0
