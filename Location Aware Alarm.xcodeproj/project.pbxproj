@@ -26,6 +26,7 @@
 		6AC09544184A911500D4E284 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC09543184A911500D4E284 /* CoreLocation.framework */; };
 		6AC996441853839B00122B55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC996431853839B00122B55 /* MapKit.framework */; };
 		6AC996471854CA3600122B55 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC996461854CA3600122B55 /* AlarmTableViewController.m */; };
+		6AC9964A1854CB4C00122B55 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC996491854CB4C00122B55 /* AddAlarmViewController.m */; };
 		6AD93A91184E333900062EF0 /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		6AC996431853839B00122B55 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6AC996451854CA3600122B55 /* AlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewController.h; sourceTree = "<group>"; };
 		6AC996461854CA3600122B55 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
+		6AC996481854CB4C00122B55 /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
+		6AC996491854CB4C00122B55 /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
 		6AD93A90184E333900062EF0 /* Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alarm.xcdatamodel; sourceTree = "<group>"; };
 		6AF07D8D184D3D8800A3A87F /* Location Aware Alarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Location Aware Alarm.entitlements"; sourceTree = "<group>"; };
 		7DB48E1073FC4B9B82033D4E /* libPods-Location Aware Alarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Location Aware Alarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +149,8 @@
 				6AC09512184A4F1900D4E284 /* Supporting Files */,
 				6AC996451854CA3600122B55 /* AlarmTableViewController.h */,
 				6AC996461854CA3600122B55 /* AlarmTableViewController.m */,
+				6AC996481854CB4C00122B55 /* AddAlarmViewController.h */,
+				6AC996491854CB4C00122B55 /* AddAlarmViewController.m */,
 			);
 			path = "Location Aware Alarm";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC9964A1854CB4C00122B55 /* AddAlarmViewController.m in Sources */,
 				6AC09525184A4F1900D4E284 /* ViewController.m in Sources */,
 				6AC0951C184A4F1900D4E284 /* AppDelegate.m in Sources */,
 				6AC996471854CA3600122B55 /* AlarmTableViewController.m in Sources */,

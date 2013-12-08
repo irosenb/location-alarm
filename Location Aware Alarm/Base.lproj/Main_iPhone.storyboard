@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="769" y="-32"/>
         </scene>
-        <!--View Controller - Add Alarm-->
+        <!--Add Alarm View Controller - Add Alarm-->
         <scene sceneID="mv7-28-JRn">
             <objects>
-                <viewController id="cEb-oB-JD6" sceneMemberID="viewController">
+                <viewController id="cEb-oB-JD6" customClass="AddAlarmViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U4z-5N-G7S"/>
                         <viewControllerLayoutGuide type="bottom" id="uWS-h0-hMe"/>
@@ -83,8 +83,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add Alarm" id="O7B-03-Grq">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uO6-2W-eeS"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PbQ-nf-lbs"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uO6-2W-eeS">
+                                            <connections>
+                                                <action selector="DismissAddAlarmView:" destination="cEb-oB-JD6" id="eZX-AJ-HWe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PbQ-nf-lbs">
+                                            <connections>
+                                                <action selector="DismissAddAlarmView:" destination="cEb-oB-JD6" id="TGX-bO-f6F"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -98,6 +106,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Add Alarm" id="IOV-o7-Zjf">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="IW1-9Q-29l"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="PbQ-nf-lbs" id="ntH-mO-xNQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWo-mL-IEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
