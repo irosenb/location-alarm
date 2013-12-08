@@ -1,18 +1,18 @@
 //
-//  ClockTableViewController.m
+//  AlarmTableViewController.m
 //  Location Aware Alarm
 //
-//  Created by Isaac Rosenberg on 12/5/13.
+//  Created by Isaac Rosenberg on 12/8/13.
 //  Copyright (c) 2013 Isaac Rosenberg. All rights reserved.
 //
 
-#import "ClockTableViewController.h"
+#import "AlarmTableViewController.h"
 
-@interface ClockTableViewController ()
+@interface AlarmTableViewController ()
 
 @end
 
-@implementation ClockTableViewController
+@implementation AlarmTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,7 +44,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#   warning Potentially incomplete method implementation.
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
