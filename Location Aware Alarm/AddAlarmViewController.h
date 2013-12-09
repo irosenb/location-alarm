@@ -7,15 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface AddAlarmViewController : UIViewController
 {
     __weak IBOutlet UIDatePicker *setAlarmDate;
 }
 
+@property (nonatomic, retain) IBOutlet MKMapView *currentLocation;
+
+
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 
-//@property (nonatomic) BOOL DoneButtonTapped;
+@property (nonatomic, retain) CLLocationManager *locationManager;
+
+
+
 
 -(IBAction) DismissAddAlarmView:(id)sender;
 -(IBAction) AddAlarmToController:(id)sender;

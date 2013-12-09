@@ -14,7 +14,8 @@
 
 @implementation AddAlarmViewController
 
-@synthesize DoneButtonTapped = _DoneButtonTapped;
+@synthesize locationManager;
+@synthesize currentLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +34,27 @@
 }
 
 -(IBAction) AddAlarmToController:(id)sender {
+    locationManager = [[CLLocationManager alloc] init];
+	locationManager.delegate = (id)self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    [locationManager startUpdatingLocation];
+    CLLocation *location = [locationManager location];
     
+    NSLog(@"Location is %@", location);
+    [locationManager stopUpdatingLocation];
+    //    [CoreDataManager sharedManager].modelName = @"Alarm";
+    //    Person *john = [Person create];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    
+    //    john.time = [dateFormatter stringFromDate: setAlarmDate.date];
+    //    john.
+    
+    NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
