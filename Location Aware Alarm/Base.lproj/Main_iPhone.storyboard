@@ -90,7 +90,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="PbQ-nf-lbs">
                                             <connections>
-                                                <action selector="DismissAddAlarmView:" destination="cEb-oB-JD6" id="TGX-bO-f6F"/>
+                                                <action selector="AddAlarmToController:" destination="cEb-oB-JD6" id="AgL-tb-7VT"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -108,6 +108,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="PbQ-nf-lbs" id="ntH-mO-xNQ"/>
+                        <outlet property="setAlarmDate" destination="YZP-y3-g0K" id="mhy-Dm-wfn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pWo-mL-IEp" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -33,14 +33,16 @@
 }
 
 -(IBAction) AddAlarmToController:(id)sender {
-    NSLog(@"HI");
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [_doneButton addTarget:self action:@selector(DoneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+//    [_doneButton addTarget:self action:@selector(DoneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
 	// Do any additional setup after loading the view.
 }

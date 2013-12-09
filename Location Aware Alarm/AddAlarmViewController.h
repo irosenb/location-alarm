@@ -10,12 +10,12 @@
 
 @interface AddAlarmViewController : UIViewController
 {
-//    __weak IBOutlet UIBarButtonItem *doneButton;
+    __weak IBOutlet UIDatePicker *setAlarmDate;
 }
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 
-@property (nonatomic) BOOL DoneButtonTapped;
+//@property (nonatomic) BOOL DoneButtonTapped;
 
 -(IBAction) DismissAddAlarmView:(id)sender;
 -(IBAction) AddAlarmToController:(id)sender;
