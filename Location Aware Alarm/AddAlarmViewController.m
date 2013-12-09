@@ -59,6 +59,17 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)didUpdateUserLocation:(MKUserLocation *)userLocation {
+    
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = currentLocation.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.2;
+    mapRegion.span.longitudeDelta = 0.2;
+    
+    [currentLocation setRegion:mapRegion animated:YES];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
