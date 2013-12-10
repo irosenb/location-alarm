@@ -34,17 +34,17 @@
 }
 
 -(IBAction) AddAlarmToController:(id)sender {
-    locationManager = [[CLLocationManager alloc] init];
-	locationManager.delegate = (id)self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = kCLDistanceFilterNone;
-    [locationManager startUpdatingLocation];
-    CLLocation *location = [locationManager location];
+//    locationManager = [[CLLocationManager alloc] init];
+//	locationManager.delegate = (id)self;
+//    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//    locationManager.distanceFilter = kCLDistanceFilterNone;
+//    [locationManager startUpdatingLocation];
+//    CLLocation *location = [locationManager location];
+    CLLocation *location = currentLocation.userLocation.location;
     
     NSLog(@"Location is %@", location);
-    [locationManager stopUpdatingLocation];
-    //    [CoreDataManager sharedManager].modelName = @"Alarm";
-    //    Person *john = [Person create];
+//    [locationManager stopUpdatingLocation];
+
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
@@ -55,18 +55,20 @@
     //    john.
     
     NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
+    NSLog(@"%@", dateTimeString);
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
--(void)didUpdateUserLocation:(MKUserLocation *)userLocation {
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
     MKCoordinateRegion mapRegion;
     mapRegion.center = currentLocation.userLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.2;
-    mapRegion.span.longitudeDelta = 0.2;
+    mapRegion.span.latitudeDelta  = 0.002;
+    mapRegion.span.longitudeDelta = 0.002;
     
     [currentLocation setRegion:mapRegion animated:YES];
+    NSLog(@"Removing self");
+    [self.currentLocation.userLocation removeObserver:self forKeyPath:@"location"];
 
 }
 
@@ -74,6 +76,11 @@
 {
     [super viewDidLoad];
     
+    self.currentLocation.showsUserLocation = YES;
+    [self.currentLocation.userLocation addObserver:self forKeyPath:@"location"
+        options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld)
+        context:NULL];
+    NSLog(@"Added watcher");
 //    [_doneButton addTarget:self action:@selector(DoneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
 	// Do any additional setup after loading the view.
