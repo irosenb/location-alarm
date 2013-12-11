@@ -59,27 +59,30 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
-    MKCoordinateRegion mapRegion;
-    mapRegion.center = currentLocation.userLocation.coordinate;
-    mapRegion.span.latitudeDelta  = 0.002;
-    mapRegion.span.longitudeDelta = 0.002;
-    
-    [currentLocation setRegion:mapRegion animated:YES];
-    NSLog(@"Removing self");
-    [self.currentLocation.userLocation removeObserver:self forKeyPath:@"location"];
+//-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    
+//    MKCoordinateRegion mapRegion;
+//    mapRegion.center = currentLocation.userLocation.coordinate;
+//    mapRegion.span.latitudeDelta  = 0.002;
+//    mapRegion.span.longitudeDelta = 0.002;
+//    
+//    [currentLocation setRegion:mapRegion animated:YES];
+//    NSLog(@"Removing self");
+//    [self.currentLocation.userLocation removeObserver:self forKeyPath:@"location"];
+//
+//}
 
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.currentLocation.showsUserLocation = YES;
-    [self.currentLocation.userLocation addObserver:self forKeyPath:@"location"
-        options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld)
-        context:NULL];
+    [currentLocation setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    
+//    [self.currentLocation.userLocation addObserver:self forKeyPath:@"location"
+//        options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld)
+//        context:NULL];
     NSLog(@"Added watcher");
 //    [_doneButton addTarget:self action:@selector(DoneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
