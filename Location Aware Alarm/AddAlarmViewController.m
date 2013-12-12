@@ -57,6 +57,16 @@
     NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
     NSLog(@"%@", dateTimeString);
     
+    NSMutableURLRequest *alarmUrl = [[NSMutableURLRequest alloc] init];
+    
+    NSDictionary *data = @{
+                           @"location": location,
+                           @"time": dateTimeString
+    };
+    
+    [alarmUrl setHTTPBody:[NSKeyedArchiver archivedDataWithRootObject:data]];
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 //-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
