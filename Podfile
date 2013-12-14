@@ -2,7 +2,7 @@
 # platform :ios	
 
 target "Location Aware Alarm" do
-	pod "ObjectiveRecord"
+  pod "ObjectiveRecord"
   pod "SSDataKit"
   pod "AFNetworking"
 end
