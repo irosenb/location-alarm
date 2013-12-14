@@ -26,6 +26,8 @@
     return self;
 }
 
+#pragma mark - Cancel alarm
+
 -(IBAction) DismissAddAlarmView:(id)sender {
 //    NSLog(@"Button pressed: %@", [sender currentTitle]);
 //    NSLog(@"Button pressed: %ld", (long)[sender tag]);
@@ -33,38 +35,37 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Add alarm
+
 -(IBAction) AddAlarmToController:(id)sender {
-//    locationManager = [[CLLocationManager alloc] init];
-//	locationManager.delegate = (id)self;
-//    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    locationManager.distanceFilter = kCLDistanceFilterNone;
-//    [locationManager startUpdatingLocation];
-//    CLLocation *location = [locationManager location];
     CLLocation *location = currentLocation.userLocation.location;
     
     NSLog(@"Location is %@", location);
-//    [locationManager stopUpdatingLocation];
 
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
     
-    //    john.time = [dateFormatter stringFromDate: setAlarmDate.date];
-    //    john.
-    
     NSString *dateTimeString = [dateFormatter stringFromDate: setAlarmDate.date];
     NSLog(@"%@", dateTimeString);
     
-    NSMutableURLRequest *alarmUrl = [[NSMutableURLRequest alloc] init];
+    // Request server to queue alarm
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     NSDictionary *data = @{
                            @"location": location,
                            @"time": dateTimeString
-    };
+                           };
     
-    [alarmUrl setHTTPBody:[NSKeyedArchiver archivedDataWithRootObject:data]];
+    [manager POST:@"http://lol.com" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"yay!");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Operation could not be completed");
+    }];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -82,6 +83,7 @@
 //
 //}
 
+#pragma mark - load view
 
 - (void)viewDidLoad
 {
