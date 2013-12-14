@@ -18,7 +18,6 @@
 
 @property (nonatomic, retain) IBOutlet MKMapView *currentLocation;
 
-
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
