@@ -60,8 +60,10 @@
     NSDictionary *data = @{
                            @"latitude": [NSNumber numberWithDouble:latitude],
                            @"longitude": [NSNumber numberWithDouble:longitude],
-                           @"time": dateTimeString
+                           @"time": setAlarmDate.date
                            };
+    
+    NSLog(@"%@", data);
     
     Alarm *alarm = [Alarm create:data];
 //    alarm.latitude = [NSNumber numberWithDouble:latitude];
@@ -74,6 +76,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         NSLog(@"Operation could not be completed");
+        NSLog(@"%@", error);
     }];
     
     
