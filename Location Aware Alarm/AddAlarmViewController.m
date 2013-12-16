@@ -63,8 +63,8 @@
                            @"time": dateTimeString
                            };
     
-    Alarm *alarm = [Alarm create];
-    alarm.latitude = [NSNumber numberWithDouble:latitude];
+    Alarm *alarm = [Alarm create:data];
+//    alarm.latitude = [NSNumber numberWithDouble:latitude];
     
     NSLog(@"%@", alarm);
     

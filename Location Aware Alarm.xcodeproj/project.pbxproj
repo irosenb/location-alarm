@@ -27,7 +27,7 @@
 		6AC996441853839B00122B55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC996431853839B00122B55 /* MapKit.framework */; };
 		6AC996471854CA3600122B55 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC996461854CA3600122B55 /* AlarmTableViewController.m */; };
 		6AC9964A1854CB4C00122B55 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC996491854CB4C00122B55 /* AddAlarmViewController.m */; };
-		6AD93A91184E333900062EF0 /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */; };
+		6AD93A91184E333900062EF0 /* Location Aware Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AD93A8F184E333900062EF0 /* Location Aware Alarm.xcdatamodeld */; };
 		6AF0C64B185D0FE300953BB1 /* _Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0C648185D0FE300953BB1 /* _Alarm.m */; };
 		6AF0C64C185D0FE300953BB1 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0C64A185D0FE300953BB1 /* Alarm.m */; };
 /* End PBXBuildFile section */
@@ -70,7 +70,7 @@
 		6AC996461854CA3600122B55 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
 		6AC996481854CB4C00122B55 /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
 		6AC996491854CB4C00122B55 /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
-		6AD93A90184E333900062EF0 /* Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alarm.xcdatamodel; sourceTree = "<group>"; };
+		6AD93A90184E333900062EF0 /* Location Aware Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Location Aware Alarm.xcdatamodel"; sourceTree = "<group>"; };
 		6AF07D8D184D3D8800A3A87F /* Location Aware Alarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Location Aware Alarm.entitlements"; sourceTree = "<group>"; };
 		6AF0C647185D0FE300953BB1 /* _Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Alarm.h; sourceTree = "<group>"; };
 		6AF0C648185D0FE300953BB1 /* _Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Alarm.m; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				6AF0C648185D0FE300953BB1 /* _Alarm.m */,
 				6AF0C649185D0FE300953BB1 /* Alarm.h */,
 				6AF0C64A185D0FE300953BB1 /* Alarm.m */,
-				6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */,
+				6AD93A8F184E333900062EF0 /* Location Aware Alarm.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				6AC996471854CA3600122B55 /* AlarmTableViewController.m in Sources */,
 				6AC09518184A4F1900D4E284 /* main.m in Sources */,
 				6AF0C64B185D0FE300953BB1 /* _Alarm.m in Sources */,
-				6AD93A91184E333900062EF0 /* Alarm.xcdatamodeld in Sources */,
+				6AD93A91184E333900062EF0 /* Location Aware Alarm.xcdatamodeld in Sources */,
 				6AF0C64C185D0FE300953BB1 /* Alarm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,13 +589,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6AD93A8F184E333900062EF0 /* Alarm.xcdatamodeld */ = {
+		6AD93A8F184E333900062EF0 /* Location Aware Alarm.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6AD93A90184E333900062EF0 /* Alarm.xcdatamodel */,
+				6AD93A90184E333900062EF0 /* Location Aware Alarm.xcdatamodel */,
 			);
-			currentVersion = 6AD93A90184E333900062EF0 /* Alarm.xcdatamodel */;
-			path = Alarm.xcdatamodeld;
+			currentVersion = 6AD93A90184E333900062EF0 /* Location Aware Alarm.xcdatamodel */;
+			path = "Location Aware Alarm.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
