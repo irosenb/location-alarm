@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "AFNetworking.h"
+#import "Alarm.h"
+//#import <ObjectiveRecord/ObjectiveRecord.h>
 
 @interface AddAlarmViewController : UIViewController
 {

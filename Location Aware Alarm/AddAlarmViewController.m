@@ -54,10 +54,19 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
+    CLLocationDegrees latitude = location.coordinate.latitude;
+    CLLocationDegrees longitude = location.coordinate.longitude;
+    
     NSDictionary *data = @{
-                           @"location": location,
+                           @"latitude": [NSNumber numberWithDouble:latitude],
+                           @"longitude": [NSNumber numberWithDouble:longitude],
                            @"time": dateTimeString
                            };
+    
+    Alarm *alarm = [Alarm create];
+    alarm.latitude = [NSNumber numberWithDouble:latitude];
+    
+    NSLog(@"%@", alarm);
     
     [manager POST:@"http://lol.com" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"yay!");
