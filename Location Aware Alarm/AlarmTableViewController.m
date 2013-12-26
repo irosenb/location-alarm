@@ -31,7 +31,13 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:NO];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +52,15 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"Returning some rows");
+    return [[Alarm all] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,6 +68,14 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NSLog(@"Adding cells");
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone defaultTimeZone];
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    
+    NSDate *time = [[[Alarm all] objectAtIndex:indexPath.row] time];
+    
+    cell.textLabel.text = [dateFormatter stringFromDate:time];
     // Configure the cell...
     
     return cell;

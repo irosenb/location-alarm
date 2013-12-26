@@ -66,18 +66,19 @@
     NSLog(@"%@", data);
     
     Alarm *alarm = [Alarm create:data];
+    [alarm save];
 //    alarm.latitude = [NSNumber numberWithDouble:latitude];
     
     NSLog(@"%@", alarm);
     
-    [manager POST:@"http://lol.com" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"yay!");
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSLog(@"Operation could not be completed");
-        NSLog(@"%@", error);
-    }];
+//    [manager POST:@"http://localhost:3000" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"yay!");
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        NSLog(@"Operation could not be completed");
+//        NSLog(@"%@", error);
+//    }];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];

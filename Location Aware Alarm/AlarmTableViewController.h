@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Alarm.h"
 
 @interface AlarmTableViewController : UITableViewController
 
