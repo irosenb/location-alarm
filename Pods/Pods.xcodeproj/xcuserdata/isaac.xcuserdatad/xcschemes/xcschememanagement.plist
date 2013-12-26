@@ -2,42 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>Pods-Location Aware Alarm-ObjectiveRecord.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-Location Aware Alarm-ObjectiveSugar.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-Location Aware Alarm-SSDataKit.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-Location Aware Alarm.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00743A97AF894311BE722E7B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>063236EA166D41B4B3194D44</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1028573261724835AEA04AD7</key>
+		<key>128662C1388E4B4484C54608</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +14,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3552A643A6134C47A45ECDA1</key>
+		<key>40E833F5BA624FDABF5721AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,17 +24,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83222B9D4D9F474A98514EC8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>84DF7692E3BA4CF7B1332877</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7E9E5B7097C4770A2554824</key>
+		<key>65164FEC12494874B6904B33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,37 +39,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD861774DAE94479BC39BFEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AFD4FE9225ED48B4A5EB80CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B22F27EBD2D34C588ADAF1A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BEC16F81631543EF93EF85C7</key>
+		<key>B74C9E3F382B4576A3E179B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5B85AECC0964882AF362891</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED76B2F5CBE74C5CB4F25594</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD826E8B1F2A4F30B9CD7999</key>
+		<key>F04C4E8FE99E4F7F9F97EEDC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,5 @@
 Write Objective C _like a boss_.<br/>
-You can get the idea in [this post](http://blog.mneorr.com/2012/11/21/adding-some-ruby-sugar-to-objectivec/).
+You can get the idea in [this post](http://mneorr.com/adding-some-ruby-sugar-to-objectivec/).
 
 <br/>
 [![Build Status](https://travis-ci.org/mneorr/ObjectiveSugar.png?branch=master)](https://travis-ci.org/mneorr/ObjectiveSugar)
@@ -21,7 +21,7 @@ __Manual__: Copy the __Classes__ folder in your project<br/>
 // Hello!
 // Hello!
 
-[@3 timesWithIndex:^(int index) {
+[@3 timesWithIndex:^(NSUInteger index) {
   NSLog(@"Another version with number: %d", index);
 }];
 // Another version with number: 0
@@ -29,7 +29,7 @@ __Manual__: Copy the __Classes__ folder in your project<br/>
 // Another version with number: 2
 
 
-[@1 upto:4 do:^(int numbah) {
+[@1 upto:4 do:^(NSInteger numbah) {
   NSLog(@"Current number.. %d", numbah);
 }];
 // Current number.. 1
@@ -37,7 +37,7 @@ __Manual__: Copy the __Classes__ folder in your project<br/>
 // Current number.. 3
 // Current number.. 4
 
-[@7 downto:4 do:^(int numbah) {
+[@7 downto:4 do:^(NSInteger numbah) {
   NSLog(@"Current number.. %d", numbah);
 }];
 // Current number.. 7
@@ -74,7 +74,7 @@ NSArray *cars = @[@"Testarossa", @"F50", @"F458 Italia"]; // or NSSet
 // Car: F50
 // Car: F458 Italia
 
-[cars eachWithIndex:^(id object, int index) {
+[cars eachWithIndex:^(id object, NSUInteger index) {
     NSLog(@"Car: %@ index: %i", object, index);
 }];
 // Car: Testarossa index: 0
@@ -85,6 +85,10 @@ cars.first;
 // Testarossa
 cars.last
 // 458 Italia
+cars.sample
+// 458 Italia
+cars.sample
+// F50
 
 [cars map:^id(id car){
 	return @([[car substringToIndex:1] isEqualToString:@"F"]);
@@ -113,13 +117,22 @@ NSArray *numbers = @[ @5, @2, @7, @1 ];
 #### NSArray only
 ``` objc
 
-NSArray *indices = @[@1, @2, @3, @4, @5];
-indices[@"1..3"];
-// [@2, @3, @4]
+NSArray *indices = @[@1, @2, @3, @4, @5, @6];
+indices[@"2..4"];
+// index from 2 to 4
+// [@3, @4, @5]
 
-NSValue *range = [NSValue valueWithRange:NSMakeRange(1, 3)];
+indices[@"2…4"];
+// index from 2 to 4 (excluded)
+// [@3, @4]
+
+indices[@"2,4"];
+// range location: 2, length: 4
+// [@3, @4, @5, @6]
+
+NSValue *range = [NSValue valueWithRange:NSMakeRange(2, 4)];
 indices[range];
-// [@2, @3, @4]
+// [@3, @4, @5, @6]
 
 NSArray *fruits = @[ @"banana", @"mango", @"apple", @"pear" ];
 
@@ -130,12 +143,12 @@ NSLog(@"Is apple a fruit? %@", [fruits includes:@"apple"] ? @"Yes" : @"No"];
 // banana, mango, apple
 
 [someFruits takeWhile:^BOOL(id fruit) {
-	return ![fruit isEqualToString:@"apple"];
+  return ![fruit isEqualToString:@"apple"];
 }];
 // banana, mango
 
 
-NSArray *landLockedCountries = @[ @"Bolivia", @"Paraguay", @"Austria", @"Switzerland", @"Hungary" ];
+NSArray *landlockedCountries = @[ @"Bolivia", @"Paraguay", @"Austria", @"Switzerland", @"Hungary" ];
 NSArray *europeanCountries = @[ @"France", @"Germany", @"Austria", @"Spain", @"Hungary", @"Poland", @"Switzerland" ];
 
 
@@ -152,7 +165,7 @@ NSArray *europeanCountries = @[ @"France", @"Germany", @"Austria", @"Spain", @"H
 // notLandlockedEuropeanCountries = France, Germany, Spain, Poland
 
 [landlockedCountries symmetricDifference:europeanCountries];
-// uniqueCountries = Bolivia, Paraguay, Austria, Switzerland, Hungary, France, Germany, Spain, Poland
+// uniqueCountries = Bolivia, Paraguay, France, Germany, Spain, Poland
 
 
 NSArray *nestedArray = @[ @[ @1, @2, @3 ], @[ @4, @5, @6, @[ @7, @8 ] ], @9, @10 ];
@@ -165,6 +178,10 @@ NSArray *abc = @[ @"a", @"b", @"c" ];
 
 [abc join:@"-"];
 // a-b-c
+
+NSArray *obverseArray = @[@1, @2, @3, @4, @5];
+[obverseArray reverse];
+// [@5, @4, @3, @2, @1]
 
 NSArray *mixedData = @[ @1, @"Objective Sugar!", @"Github", @4, @"5"];
 
@@ -257,12 +274,12 @@ NSString *sentence = NSStringWithFormat(@"This is a text-with-argument %@", @123
 #### C additions
 
 ``` objc
-unless([girl isTaken]) {
+unless(_messages) { 
   // the code runs only if condition is false
-  [girl giveMeYourNumber];
+  _messages = [self initializeMessages];
 }
 ```
-### Contributing
+#### Contributing
 
 ObjectiveSugar is tested with [Kiwi](https://github.com/allending/Kiwi), and tests are located in SampleProject.<br/>
 If you plan on contributing to the project, please:
@@ -271,4 +288,9 @@ If you plan on contributing to the project, please:
   * Write documentation
 
 <br/>
-Thanks: Neil Cowburn (@neilco)
+
+#### Team
+
+- Marin Usalj [@mneorr](https://github.com/mneorr)
+- Neil Cowburn [@neilco](https://github.com/neilco)
+

@@ -1,26 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yPM-kh-m8Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Gml-Ws-eaW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Alarm Table View Controller - Alarms-->
+        <scene sceneID="AFj-tP-AUB">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <tableViewController id="XEc-R5-Lgl" customClass="AlarmTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hz5-qY-obZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="y3l-cy-kFY">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3l-cy-kFY" id="5ss-81-3gE">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="f0N-KS-lrB" kind="push" id="9N0-DY-Lzh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Alarms" id="bwy-id-nmD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="i6g-4u-2yw">
+                            <connections>
+                                <segue destination="cEb-oB-JD6" kind="modal" id="oB1-3D-YO4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqZ-6C-v81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="-32"/>
+        </scene>
+        <!--Add Alarm View Controller - Add Alarm-->
+        <scene sceneID="mv7-28-JRn">
+            <objects>
+                <viewController id="cEb-oB-JD6" customClass="AddAlarmViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r87-BG-v9Z"/>
-                        <viewControllerLayoutGuide type="bottom" id="TCy-a5-Ffv"/>
+                        <viewControllerLayoutGuide type="top" id="U4z-5N-G7S"/>
+                        <viewControllerLayoutGuide type="bottom" id="uWS-h0-hMe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="tCe-tE-0yQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mWH-6x-c4x">
-                                <rect key="frame" x="0.0" y="140" width="320" height="162"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YZP-y3-g0K">
+                                <rect key="frame" x="0.0" y="82" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="407525987.375543">
-                                    <!--2013-11-30 17:39:47 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="407961085.96830899">
+                                    <!--2013-12-05 18:31:25 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
                                     <data key="data">
@@ -44,68 +78,78 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKW-o2-0XT">
-                                <rect key="frame" x="20" y="341" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set Alarm">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="AlarmSetButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K49-Kz-cIl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpv-Ho-zak">
-                                <rect key="frame" x="20" y="379" width="280" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel Alarm">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="AlarmCancelButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i56-MY-JIo"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fib-Uj-cQZ">
+                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Alarm" id="O7B-03-Grq">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uO6-2W-eeS">
+                                            <connections>
+                                                <action selector="DismissAddAlarmView:" destination="cEb-oB-JD6" id="eZX-AJ-HWe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PbQ-nf-lbs">
+                                            <connections>
+                                                <action selector="AddAlarmToController:" destination="cEb-oB-JD6" id="AgL-tb-7VT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lil-yY-d7k">
+                                <rect key="frame" x="0.0" y="315" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5ko-If-SPS"/>
+                    <navigationItem key="navigationItem" title="Add Alarm" id="IOV-o7-Zjf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IW1-9Q-29l"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="setAlarmDate" destination="mWH-6x-c4x" id="BXo-iY-eL0"/>
+                        <outlet property="currentLocation" destination="lil-yY-d7k" id="KLq-RT-kVz"/>
+                        <outlet property="doneButton" destination="PbQ-nf-lbs" id="ntH-mO-xNQ"/>
+                        <outlet property="setAlarmDate" destination="YZP-y3-g0K" id="mhy-Dm-wfn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWo-mL-IEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="39"/>
+            <point key="canvasLocation" x="1312" y="-32"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="rx6-iy-CXY">
+        <!--View Controller-->
+        <scene sceneID="R2q-ll-mRW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SHS-yK-4EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="yPM-kh-m8Q" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zyp-Zh-Mnm">
+                <viewController id="f0N-KS-lrB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nJA-qC-xWD"/>
+                        <viewControllerLayoutGuide type="bottom" id="QC1-na-Uwu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YaF-uO-E4m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qPk-91-HnZ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qPk-91-HnZ" id="4De-0o-HfZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yPM-kh-m8Q" id="dpt-Pu-WGo"/>
-                            <outlet property="delegate" destination="yPM-kh-m8Q" id="62j-lJ-21e"/>
-                        </connections>
-                    </tableView>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="push" id="gEV-0l-adv"/>
-                    </connections>
-                </tableViewController>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D4v-4J-d8u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVg-aL-lyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="39"/>
+            <point key="canvasLocation" x="1312" y="658"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="loq-WC-DDa">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Gml-Ws-eaW" sceneMemberID="viewController">
+                    <keyCommands/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RLZ-Ab-ED5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XEc-R5-Lgl" kind="relationship" relationship="rootViewController" id="yt1-bU-2R2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoA-hq-yba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="-32"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
