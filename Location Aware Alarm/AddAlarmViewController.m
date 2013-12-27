@@ -67,11 +67,10 @@
     
     Alarm *alarm = [Alarm create:data];
     [alarm save];
-//    alarm.latitude = [NSNumber numberWithDouble:latitude];
     
     NSLog(@"%@", alarm);
     
-//    [manager POST:@"http://localhost:3000" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//    [manager POST:@"http://isaacs-macbook-air.local:3000/" parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSLog(@"yay!");
 //        
 //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -92,12 +91,8 @@
     
     self.currentLocation.showsUserLocation = YES;
     [currentLocation setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
-    
-//    [self.currentLocation.userLocation addObserver:self forKeyPath:@"location"
-//        options:(NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld)
-//        context:NULL];
+
     NSLog(@"Added watcher");
-//    [_doneButton addTarget:self action:@selector(DoneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
 	// Do any additional setup after loading the view.
 }
