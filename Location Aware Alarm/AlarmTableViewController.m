@@ -75,6 +75,7 @@
     
     NSDate *time = [[[Alarm all] objectAtIndex:indexPath.row] time];
     
+    
     cell.textLabel.text = [dateFormatter stringFromDate:time];
     // Configure the cell...
     
